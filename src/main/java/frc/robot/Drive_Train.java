@@ -13,12 +13,12 @@ public class Drive_Train {
         if(Math.abs(RobotMap.Controller.getRawAxis(1))<0.05){
             leftSpeed = 0;
         }else{
-            leftSpeed = RobotMap.Controller.getRawAxis(1);
+            leftSpeed = RobotMap.Controller.getRawAxis(1) * -1;
         }
         if(Math.abs(RobotMap.Controller.getRawAxis(3))<0.05){
             rightSpeed = 0;
         }else{
-            rightSpeed = RobotMap.Controller.getRawAxis(3);
+            rightSpeed = RobotMap.Controller.getRawAxis(3) * -1;
         }
         leftDrive.set(ControlMode.PercentOutput, leftSpeed);
         rightDrive.set(ControlMode.PercentOutput, rightSpeed);
